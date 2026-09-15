@@ -1,0 +1,334 @@
+/* ------------------------------
+ * ОСНОВНЫЕ СТИЛИ (Из <style>)
+ * ------------------------------ */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0c0a09; /* Очень темный фон, почти черный */
+}
+.font-header {
+    font-family: 'Orbitron', sans-serif;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hero-bg {
+    /* Фоновое изображение удалено, его заменяет видео и оверлей */
+    /* background-image: linear-gradient(rgba(12, 10, 9, 0.85), rgba(12, 10, 9, 1)), url('https://images.alphacoders.com/133/1332287.png'); */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Важно для позиционирования видео внутри */
+    overflow: hidden; /* Важно для предотвращения скроллбаров от видео */
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+.card-hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* border: 1px solid #27272a; */ /* Убрана стандартная граница для использования градиентной */
+    border: none !important; 
+}
+.card-hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+    /* border-color: #8b5cf6; */ /* Убрана стандартная граница */
+}
+.blur-glow-button {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.3);
+}
+.blur-glow-button:hover {
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6), 0 0 40px rgba(59, 130, 246, 0.4);
+}
+.blur-glow-footer {
+    box-shadow: 0 -10px 30px rgba(139, 92, 246, 0.15);
+}
+#preloader {
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+#preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+#toTopBtn {
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+.lang-toggle-checkbox:checked + .lang-toggle-label .lang-toggle-ball {
+    transform: translateX(24px); /* 24px = 1.5rem */
+}
+.lang-toggle-checkbox:checked + .lang-toggle-label {
+    background-color: #8b5cf6; /* Violet */
+}
+
+
+/* ------------------------------
+ * НОВЫЕ СТИЛИ (Запрос)
+ * ------------------------------ */
+
+/* 1. Эффект "Блика" (Shine) */
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+    -webkit-mask-image: radial-gradient(white, black); /* Для лучшей производительности */
+}
+.shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        transparent 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+
+/* 2. Эффект "Глитча" (Glitch) на Логотипе (Теперь автоматический) */
+#logo {
+    position: relative;
+    cursor: pointer;
+}
+#logo::before,
+#logo::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0c0a09; /* Фон родителя */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    /* Наследование градиента */
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+/* Убран :hover, анимация запускается по умолчанию с задержкой */
+#logo::before {
+    left: 1px;
+    text-shadow: -1px 0 #ef4444; /* Red */
+    animation: glitch-anim-1 0.5s infinite linear alternate-reverse;
+    animation-delay: 12s; /* Начинает работать через 12 секунд */
+}
+#logo::after {
+    left: -1px;
+    text-shadow: -1px 0 #3b82f6; /* Blue */
+    animation: glitch-anim-2 0.5s infinite linear alternate-reverse;
+    animation-delay: 12.1s; /* Слегка смещенная задержка */
+}
+@keyframes glitch-anim-1 {
+    0% { clip: rect(42px, 9999px, 44px, 0); }
+    5% { clip: rect(17px, 9999px, 98px, 0); }
+    15% { clip: rect(56px, 9999px, 58px, 0); }
+    25% { clip: rect(42px, 9999px, 44px, 0); }
+    100% { clip: rect(92px, 9999px, 98px, 0); }
+}
+@keyframes glitch-anim-2 {
+    0% { clip: rect(45px, 9999px, 99px, 0); }
+    10% { clip: rect(28px, 9999px, 70px, 0); }
+    60% { clip: rect(18px, 9999px, 82px, 0); }
+    90% { clip: rect(78px, 9999px, 92px, 0); }
+    100% { clip: rect(32px, 9999px, 46px, 0); }
+}
+
+
+/* 3. Стили для 3D-Карусели Игр */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    /* Высота карусели. Адаптируйте, если нужно */
+    height: 500px;
+    margin-top: -2rem; /* Компенсация заголовка */
+}
+.carousel-scene {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Важно! Устанавливаем 3D-перспективу */
+    perspective: 1500px;
+}
+.carousel {
+    width: 300px; /* Ширина одной панели */
+    height: 400px; /* Высота одной панели */
+    position: relative;
+    /* Включаем 3D-пространство для дочерних элементов */
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.carousel-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 400px;
+    background: #1c1917; /* bg-stone-900 */
+    border-radius: 0.5rem; /* rounded-lg */
+    overflow: hidden;
+    /* border: 1px solid #44403c; */ /* Убрана стандартная граница */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    /* Скрываем обратную сторону */
+    backface-visibility: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.carousel-panel:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+    border-color: #8b5cf6;
+}
+.carousel-panel img {
+    width: 100%;
+    height: 320px; /* 80% высоты */
+    object-fit: cover;
+}
+.carousel-panel h3 {
+    padding: 1rem; /* p-4 */
+    text-align: center;
+    color: #e7e5e4; /* text-gray-200 */
+    font-size: 1.25rem; /* text-xl */
+}
+
+/* * Расставляем 10 панелей по кругу
+ * Формула: 
+ * transform: rotateY( (360 / 10) * N ) translateZ( 460px );
+ * (360 / 10 = 36deg)
+ * translateZ - это радиус карусели. Подбирается под размер панелей.
+ */
+.carousel-panel:nth-child(1)  { transform: rotateY(0deg)   translateZ(460px); }
+.carousel-panel:nth-child(2)  { transform: rotateY(36deg)  translateZ(460px); }
+.carousel-panel:nth-child(3)  { transform: rotateY(72deg)  translateZ(460px); }
+.carousel-panel:nth-child(4)  { transform: rotateY(108deg) translateZ(460px); }
+.carousel-panel:nth-child(5)  { transform: rotateY(144deg) translateZ(460px); }
+.carousel-panel:nth-child(6)  { transform: rotateY(180deg) translateZ(460px); }
+.carousel-panel:nth-child(7)  { transform: rotateY(216deg) translateZ(460px); }
+.carousel-panel:nth-child(8)  { transform: rotateY(252deg) translateZ(460px); }
+.carousel-panel:nth-child(9)  { transform: rotateY(288deg) translateZ(460px); }
+.carousel-panel:nth-child(10) { transform: rotateY(324deg) translateZ(460px); }
+
+
+/* Кнопки навигации карусели */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(139, 92, 246, 0.7); /* bg-violet-600/70 */
+    color: white;
+    width: 3rem; /* w-12 */
+    height: 3rem; /* h-12 */
+    border-radius: 9999px; /* rounded-full */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.carousel-btn:hover {
+    background: #8b5cf6; /* bg-violet-600 */
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* ------------------------------
+ * СТИЛИ ДЛЯ ВИДЕО И ГРАДИЕНТОВ
+ * ------------------------------ */
+
+/* 4. Стили для Видео Фона (Vimeo) */
+.video-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden; 
+}
+
+/* Iframe: центрируем и растягиваем так, чтобы он всегда покрывал область (без полос) */
+.video-background-iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    /* Это гарантирует, что видео всегда будет покрывать контейнер (для 16:9) */
+    min-width: 100%; 
+    min-height: 100%; 
+    width: 177.77vh; /* (100vh / 9) * 16 */
+    height: 56.25vw; /* (100vw / 16) * 9 */
+    pointer-events: none; /* Не дает пользователю взаимодействовать с iframe */
+}
+
+/* Градиентный оверлей: необходим для читаемости белого текста */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Используем темный градиент для читаемости */
+    background-image: linear-gradient(rgba(12, 10, 9, 0.85), rgba(12, 10, 9, 1)); 
+    z-index: 5; /* Расположен выше видео, но ниже контента (z-10) */
+}
+
+
+/* 5. Градиентные границы для карточек */
+.gradient-border-card {
+    position: relative;
+    padding: 1px; /* Визуальная толщина рамки */
+    background: #0c0a09; /* Основной фон, чтобы скрыть рамку в центре */
+    z-index: 1;
+}
+
+.gradient-border-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Создаем градиент по краю */
+    background: linear-gradient(45deg, #8b5cf6, #3b82f6);
+    padding: 1px; 
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude; 
+    border-radius: 0.5rem; /* Соответствует rounded-lg */
+    z-index: -1;
+    transition: background 0.3s ease;
+}
+
+.card-hover-effect:hover .gradient-border-card::before {
+    /* Усилить градиент при наведении */
+    background: linear-gradient(45deg, #a78bfa, #60a5fa); 
+}

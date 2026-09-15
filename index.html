@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Reichlich Community - Игровое Сообщество</title>
+    
+    <meta name="description" content="Reichlich Community - дружное игровое сообщество для Valorant, CS2, Minecraft и ETS2. Присоединяйтесь к нам в Discord!">
+    
+    <meta property="og:title" content="Reichlich Community - Игровое Сообщество">
+    <meta property="og:description" content="Сообщество для совместных побед. Твой лучший уголок в игровом мире.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reichlich.gg"> <meta property="og:image" content="https://images.alphacoders.com/133/1332287.png"> <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reichlich Community">
+    <meta name="twitter:description" content="Сообщество для совместных побед. Твой лучший уголок в игровом мире.">
+    <meta name="twitter:image" content="https://images.alphacoders.com/133/1332287.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-200">
+
+    <div id="preloader" class="fixed inset-0 bg-stone-950 flex items-center justify-center z-[100]">
+        <div class="font-header text-5xl font-bold tracking-wider gradient-text animate-pulse">REICHLICH</div>
+    </div>
+
+    <header class="bg-stone-950/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" id="logo" class="font-header text-2xl font-bold tracking-wider gradient-text" data-text="REICHLICH">REICHLICH</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="hover:text-violet-400 transition-colors duration-300">
+                    <span class="lang-ru">О нас</span>
+                    <span class="lang-en hidden">About Us</span>
+                </a>
+                <a href="#team" class="hover:text-violet-400 transition-colors duration-300">
+                    <span class="lang-ru">Команда</span>
+                    <span class="lang-en hidden">Team</span>
+                </a>
+                <a href="#games" class="hover:text-violet-400 transition-colors duration-300">
+                    <span class="lang-ru">Игры</span>
+                    <span class="lang-en hidden">Games</span>
+                </a>
+                <a href="#apply" class="hover:text-violet-400 transition-colors duration-300">
+                    <span class="lang-ru">Заявка</span>
+                    <span class="lang-en hidden">Apply</span>
+                </a>
+                <a href="#social" class="hover:text-violet-400 transition-colors duration-300">
+                    <span class="lang-ru">Платформы</span>
+                    <span class="lang-en hidden">Platforms</span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex items-center space-x-2 text-sm">
+                    <span class="font-medium text-gray-400">RU</span>
+                    <input type="checkbox" id="lang-toggle" class="lang-toggle-checkbox hidden">
+                    <label for="lang-toggle" class="lang-toggle-label cursor-pointer w-12 h-6 bg-stone-700 rounded-full flex items-center p-1 transition-colors duration-300">
+                        <div class="lang-toggle-ball w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
+                    </label>
+                    <span class="font-medium text-gray-400">EN</span>
+                </div>
+                
+                <a href="https://discord.gg/Reichlich" target="_blank" class="hidden md:block bg-violet-600 hover:bg-violet-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-violet-500/20 blur-glow-button">
+                    Discord
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home" class="hero-bg min-h-screen flex items-center justify-center text-center pt-20 relative overflow-hidden">
+        
+        <div class="video-background-container">
+            <iframe src="https://player.vimeo.com/video/1094829828?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    title="0619"
+                    class="video-background-iframe">
+            </iframe>
+        </div>
+        <div class="video-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="fade-in">
+                <h1 class="font-header text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wide">
+                    Reichlich <span class="gradient-text">Community</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                    <span class="lang-ru">Сообщество для совместных побед. <br class="hidden md:block"> Твой лучший уголок в игровом мире.</span>
+                    <span class="lang-en hidden">A community for joint victories. <br class="hidden md:block"> Your best corner in the gaming world.</span>
+                </p>
+                <a href="https://discord.gg/Reichlich" target="_blank" class="mt-8 bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-bold py-4 px-10 rounded-lg text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3 shadow-2xl shadow-violet-500/40 blur-glow-button">
+                    <i class="fab fa-discord text-2xl"></i>
+                    <span class="lang-ru">Присоединиться к Discord</span>
+                    <span class="lang-en hidden">Join Discord</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section id="about" class="py-20 bg-stone-950 overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-header text-4xl font-bold mb-12 gradient-text shine-effect gsap-fade-up">
+                <span class="lang-ru">Кто мы такие?</span>
+                <span class="lang-en hidden">Who are we?</span>
+            </h2>
+            <p class="text-gray-300 max-w-3xl mx-auto text-lg mb-12 gsap-fade-up" data-delay="0.2">
+                <span class="lang-ru">Reichlich — это не просто клан, это команда друзей, объединенных любовью к разным играм.</span>
+                <span class="lang-en hidden">Reichlich is not just a clan, it's a team of friends united by a love for different games.</span>
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-stone-900 p-8 rounded-lg card-hover-effect gsap-card gradient-border-card">
+                    <i class="fas fa-users text-4xl text-violet-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-ru">Командная игра</span>
+                        <span class="lang-en hidden">Team Play</span>
+                    </h3>
+                    <p class="text-gray-400">
+                        <span class="lang-ru">Побеждаем вместе, поддерживая друг друга в любой ситуации.</span>
+                        <span class="lang-en hidden">We win together, supporting each other in any situation.</span>
+                    </p>
+                </div>
+                <div class="bg-stone-900 p-8 rounded-lg card-hover-effect gsap-card gradient-border-card" data-delay="0.1">
+                    <i class="fas fa-handshake text-4xl text-violet-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-ru">Уважение</span>
+                        <span class="lang-en hidden">Respect</span>
+                    </h3>
+                    <p class="text-gray-400">
+                        <span class="lang-ru">Мы ценим каждого участника и создаем нетоксичную атмосферу.</span>
+                        <span class="lang-en hidden">We value every member and create a non-toxic atmosphere.</span>
+                    </p>
+                </div>
+                <div class="bg-stone-900 p-8 rounded-lg card-hover-effect gsap-card gradient-border-card" data-delay="0.2">
+                    <i class="fas fa-gamepad text-4xl text-violet-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-ru">Веселье</span>
+                        <span class="lang-en hidden">Fun</span>
+                    </h3>
+                    <p class="text-gray-400">
+                        <span lang="ru">Игры должны приносить удовольствие, и мы об этом не забываем.</span>
+                        <span lang="en" class="hidden">Games should be fun, and we don't forget that.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 bg-black overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-header text-4xl font-bold mb-12 gradient-text shine-effect gsap-fade-up">
+                <span class="lang-ru">Команда Проекта</span>
+                <span class="lang-en hidden">Project Team</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                
+                <div class="bg-stone-900 p-8 rounded-lg card-hover-effect flex flex-col items-center gsap-card gradient-border-card">
+                    <img src="https://placehold.co/150x150/27272a/8b5cf6?text=Altovv" alt="Altovv" class="w-32 h-32 rounded-full mb-5 border-4 border-stone-800">
+                    <h3 class="text-2xl font-bold">Altovv</h3>
+                    <p class="text-violet-400 font-medium mb-3">
+                        <span class="lang-ru">Администратор / Дизайнер</span>
+                        <span class="lang-en hidden">Administrator / Designer</span>
+                    </p>
+                    <p class="text-gray-400">
+                        <span class="lang-ru">Следит за порядком в Discord, помогает решать любые технические вопросы. </span>
+                        <span class="lang-en hidden">Maintains order in Discord and helps resolve any technical issues.</span>
+                    </p>
+                </div>
+                
+                <div class="bg-stone-900 p-8 rounded-lg card-hover-effect flex flex-col items-center gsap-card gradient-border-card" data-delay="0.1">
+                    <img src="https://placehold.co/150x150/27272a/8b5cf6?text=Seijoku666" alt="Seijoku666" class="w-32 h-32 rounded-full mb-5 border-4 border-stone-800">
+                    <h3 class="text-2xl font-bold">Seijoku666</h3>
+                    <p class="text-violet-400 font-medium mb-3">
+                        <span class="lang-ru">Основатель / Админ</span>
+                        <span class="lang-en hidden">Founder / Admin</span>
+                    </p>
+                    <p class="text-gray-400">
+                        <span class="lang-ru">Главный идеолог и организатор сообщества. Всегда онлайн.</span>
+                        <span class="lang-en hidden">Chief ideologist and organizer of the community. Always online.</span>
+                    </p>
+                </div>
+                
+                <div class="bg-stone-900 p-8 rounded-lg card-hover-effect flex flex-col items-center gsap-card gradient-border-card" data-delay="0.2">
+                    <img src="https://placehold.co/150x150/27272a/8b5cf6?text=Powerul" alt="Powerul" class="w-32 h-32 rounded-full mb-5 border-4 border-stone-800">
+                    <h3 class="text-2xl font-bold">Powerul</h3>
+                    <p class="text-violet-400 font-medium mb-3">
+                        <span class="lang-ru">Комьюнити-менеджер</span>
+                        <span class="lang-en hidden">Community Manager</span>
+                    </p>
+                    <p class="text-gray-400">
+                        <span class="lang-ru">Организует ивенты, турниры и создает хорошую атмосферу в чатах.</span>
+                        <span class="lang-en hidden">Organizes events, tournaments, and creates a great atmosphere in the chats.</span>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="py-20 bg-stone-950 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-header text-4xl font-bold mb-16 gradient-text shine-effect gsap-fade-up">
+                <span class="lang-ru">Во что мы играем</span>
+                <span class="lang-en hidden">What We Play</span>
+            </h2>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-scene">
+                <div id="game-carousel" class="carousel">
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/a78bfa?text=Valorant" alt="Valorant">
+                        <h3 class="text-xl font-bold">Valorant</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/3b82f6?text=CS2" alt="CS2">
+                        <h3 class="text-xl font-bold">Counter-Strike 2</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/22c55e?text=Minecraft" alt="Minecraft">
+                        <h3 class="text-xl font-bold">Minecraft</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/f59e0b?text=ETS2" alt="ETS2">
+                        <h3 class="text-xl font-bold">Euro Truck Sim 2</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/ef4444?text=Apex+Legends" alt="Apex Legends">
+                        <h3 class="text-xl font-bold">Apex Legends</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/a855f7?text=LoL" alt="League of Legends">
+                        <h3 class="text-xl font-bold">League of Legends</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/facc15?text=Cyberpunk" alt="Cyberpunk 2077">
+                        <h3 class="text-xl font-bold">Cyberpunk 2077</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/65a30d?text=Helldivers+2" alt="Helldivers 2">
+                        <h3 class="text-xl font-bold">Helldivers 2</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/be185d?text=Tarkov" alt="Escape from Tarkov">
+                        <h3 class="text-xl font-bold">Escape from Tarkov</h3>
+                    </a>
+                    <a href="#" class="carousel-panel">
+                        <img src="https://placehold.co/300x400/1f2937/0891b2?text=Rocket+League" alt="Rocket League">
+                        <h3 class="text-xl font-bold">Rocket League</h3>
+                    </a>
+                </div>
+            </div>
+            <button id="prev-btn" class="carousel-btn left-4">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="next-btn" class="carousel-btn right-4">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        </section>
+
+    <section id="apply" class="py-20 bg-black overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="font-header text-4xl font-bold mb-8 gradient-text shine-effect gsap-fade-up">
+                    <span class="lang-ru">Присоединяйся к нам</span>
+                    <span class="lang-en hidden">Apply to Join</span>
+                </h2>
+                <p class="text-gray-400 mb-10 gsap-fade-up" data-delay="0.2">
+                    <span class="lang-ru">Хочешь стать частью Reichlich? Заполни короткую форму, и мы свяжемся с тобой в Discord.</span>
+                    <span class="lang-en hidden">Want to be a part of Reichlich? Fill out this short form, and we'll contact you on Discord.</span>
+                </p>
+            </div>
+            
+            <form name="apply" class="max-w-xl mx-auto gsap-fade-up" data-delay="0.4" data-netlify="true" netlify-honeypot="bot-field">
+                <p class="hidden">
+                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                </p>
+                <input type="hidden" name="form-name" value="apply" />
+                
+                <div class="mb-5">
+                    <label for="discord_nick" class="block mb-2 text-sm font-medium text-gray-300">
+                        <span class="lang-ru">Твой Discord Nickname (например, user#1234)</span>
+                        <span class="lang-en hidden">Your Discord Nickname (e.g., user#1234)</span>
+                    </label>
+                    <input type="text" id="discord_nick" name="discord_nick" class="bg-stone-900 border border-stone-700 text-gray-200 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-3" required>
+                </div>
+                <div class="mb-5">
+                    <label for="why_join" class="block mb-2 text-sm font-medium text-gray-300">
+                        <span class="lang-ru">Почему хочешь присоединиться?</span>
+                        <span class="lang-en hidden">Why do you want to join?</span>
+                    </label>
+                    <textarea id="why_join" name="why_join" rows="4" class="bg-stone-900 border border-stone-700 text-gray-200 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-3" required></textarea>
+                </div>
+                <div class="mb-8">
+                    <label for="how_found" class="block mb-2 text-sm font-medium text-gray-300">
+                        <span class="lang-ru">Как ты о нас узнал?</span>
+                        <span class="lang-en hidden">How did you hear about us?</span>
+                    </label>
+                    <input type="text" id="how_found" name="how_found" class="bg-stone-900 border border-stone-700 text-gray-200 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-3">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-bold py-3 px-10 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-2xl shadow-violet-500/40 blur-glow-button">
+                        <span class="lang-ru">Отправить заявку</span>
+                        <span class="lang-en hidden">Send Application</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="social" class="py-20 bg-stone-950 overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-header text-4xl font-bold mb-8 gradient-text shine-effect gsap-fade-up">
+                <span class="lang-ru">Наши Платформы</span>
+                <span class="lang-en hidden">Our Platforms</span>
+            </h2>
+            <p class="text-gray-400 mb-12 max-w-2xl mx-auto gsap-fade-up" data-delay="0.2">
+                <span class="lang-ru">Присоединяйтесь к нам, чтобы быть в курсе всех событий и найти команду.</span>
+                <span class="lang-en hidden">Join us to stay up to date with all events and find a team.</span>
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 gsap-fade-up" data-delay="0.4">
+                <a href="https://discord.gg/Reichlich" target="_blank" class="w-full md:w-auto flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 text-lg blur-glow-button">
+                    <i class="fab fa-discord text-2xl"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="https://steamcommunity.com/groups/reichlichcommunity" target="_blank" class="w-full md:w-auto flex items-center justify-center gap-3 bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 text-lg">
+                    <i class="fab fa-steam text-2xl"></i>
+                    <span>Steam Group</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-black py-8 blur-glow-footer">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p class="font-header text-lg gradient-text">REICHLICH</p>
+            <div class="flex justify-center space-x-6 my-4">
+                <a href="https://discord.gg/Reichlich" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors text-2xl"><i class="fab fa-discord"></i></a>
+                <a href="https://steamcommunity.com/groups/reichlichcommunity" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors text-2xl"><i class="fab fa-steam"></i></a>
+            </div>
+            <p>
+                <span class="lang-ru">&copy; 2024 Reichlich Community. Все права защищены.</span>
+                <span class="lang-en hidden">&copy; 2024 Reichlich Community. All rights reserved.</span>
+            </p>
+        </div>
+    </footer>
+
+    <a id="toTopBtn" href="#home" class="fixed bottom-6 right-6 bg-violet-600 hover:bg-violet-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 invisible hover:scale-110 z-40">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    
+    <script src="script.js" defer></script>
+
+</body>
+</html>
